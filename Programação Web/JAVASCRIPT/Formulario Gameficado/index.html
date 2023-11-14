@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Gameficado</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <div class="container">
+        <h1>Cadastro</h1>
+        <div class="pagina-formulario" id="pagina-1" data-etapa="1">
+            <form class="formulario" id="formulario" onsubmit="event.preventDefault()">
+                <label>Nome Completo:</label>
+                <input type="text" id="nome" onfocusout="pontuar()" placeholder="Nome Completo">
+                <label>Idade</label>
+                <input type="number" onfocusout="pontuar()" placeholder="Idade">
+                <label>Data de Nascimento</label>
+                <input type="date" onfocusout="pontuar()" placeholder="Data de Nascimento">
+
+                <label for="sexo">Sexo</label>
+                <select id="sexo" onfocusout="pontuar()">
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                    <option value="Prefiro nao responder">Prefiro não responder</option>
+                </select>
+                </select>
+                <label>Endereço:</label>
+                <input type="text" onfocusout="pontuar()" />
+
+                <label for="estado">Estado:</label>
+                <select id="estado" onfocusout="pontuar()">
+                    <option>Selecione o Estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            <div class="pagina-formulario" id="pagina-2" data-etapa="2" style="display: none;">
+            </form>
+        </div>
+        <div id="botao">
+            <button class="btnProxima" type="button" onclick="etapaAnterior()">Anterior</button>
+            <button class="btn-salvar" onclick="limparFormulario()">SALVAR</button>
+            <button class="btnProxima" type="button" onclick="proximaEtapa()">Próximo</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
