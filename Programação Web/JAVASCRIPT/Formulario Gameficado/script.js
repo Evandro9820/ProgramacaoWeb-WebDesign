@@ -1,15 +1,15 @@
 function proximaEtapa() {
     moverEtapa(1);
-  }
-  
-  function etapaAnterior() {
+}
+
+function etapaAnterior() {
     moverEtapa(-1);
-  }
-  
-  function moverEtapa(direcao) {
+}
+
+function moverEtapa(direcao) {
     var elementoEtapaAtual = document.querySelector('.pagina-formulario:not([style="display: none;"])');
     if (!elementoEtapaAtual) {
-        document.getElementById('pagina-1').style.display = 'block';
+        document.getElementById('pagina-1').style.display = "block";
         return;
     }
     
@@ -27,4 +27,11 @@ function proximaEtapa() {
             alert("Você completou o formulário!");
         }
     }
-  }
+
+    var botaoSalvar = document.getElementById('btn-salvar');
+    if (numeroProximaEtapa == 2) {
+        botaoSalvar.style.display = 'inline-block';
+    } else {
+        botaoSalvar.style.display = 'none';
+    }
+}

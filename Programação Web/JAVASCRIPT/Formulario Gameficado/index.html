@@ -15,21 +15,26 @@
     <div class="container">
         <h1>Cadastro</h1>
         <div class="pagina-formulario" id="pagina-1" data-etapa="1">
-            <form class="formulario" id="formulario" onsubmit="event.preventDefault()">
-                <label>Nome Completo:</label>
-                <input type="text" id="nome" onfocusout="pontuar()" placeholder="Nome Completo">
-                <label>Idade</label>
-                <input type="number" onfocusout="pontuar()" placeholder="Idade">
-                <label>Data de Nascimento</label>
-                <input type="date" onfocusout="pontuar()" placeholder="Data de Nascimento">
+            <form id="form" onsubmit="event.preventDefault()"><!--IMPEDE DE ENVIAR O FORMULARIO-->
 
-                <label for="sexo">Sexo</label>
+                <label>Nome Completo:</label>
+                <input type="text" id="nome" onfocusout="pontuar()" />
+
+                <label>Idade:</label>
+                <input type="number" onfocusout="pontuar()" />
+
+                <label>Data de Nascimento</label>
+                <input type="date" onfocusout="pontuar()" />
+
+                <label for="sexo">Sexo:</label>
                 <select id="sexo" onfocusout="pontuar()">
+                    <option> </option>
                     <option>Feminino</option>
                     <option>Masculino</option>
-                    <option value="Prefiro nao responder">Prefiro não responder</option>
+                    <option>Prefiro não responder</option>
+
                 </select>
-                </select>
+
                 <label>Endereço:</label>
                 <input type="text" onfocusout="pontuar()" />
 
@@ -64,16 +69,44 @@
                     <option value="SE">Sergipe</option>
                     <option value="TO">Tocantins</option>
                 </select>
-            <div class="pagina-formulario" id="pagina-2" data-etapa="2" style="display: none;">
             </form>
         </div>
+
+        <div class="pagina-formulario" id="pagina-2" data-etapa="2" style="display: none;">
+        <form id="form" onsubmit="event.preventDefault()"><!--IMPEDE DE ENVIAR O FORMULARIO-->   
+            <label>Celular/WhatsApp:</label>
+            <input type="number" onfocusout="pontuar()" />
+
+            <label>E-mail:</label>
+            <input type="email" onfocusout="pontuar()" />
+
+            <label>CPF:</label>
+            <input type="number" onfocusout="pontuar()" />
+
+            <label>RG:</label>
+            <input type="number" />
+
+            <label for="civil">Estado Cívil:</label>
+            <select onfocusout="pontuar()">
+                <option> </option>
+                <option>Solteiro(o)</option>
+                <option>Casado(a)</option>
+                <option>Divorciado(a)</option>
+                <option>Prefiro não responder</option>
+            </select>
+        </div>
+
         <div id="botao">
             <button class="btnProxima" type="button" onclick="etapaAnterior()">Anterior</button>
-            <button class="btn-salvar" onclick="limparFormulario()">SALVAR</button>
+            <button id="btn-salvar" onclick="limparFormulario()">SALVAR</button>
             <button class="btnProxima" type="button" onclick="proximaEtapa()">Próximo</button>
         </div>
-    </div>
+        <!--JA É SUBMITT AUTOMATICAMENTE     - SE QUISER QUE FIQUE UM EM CIMA DO OUTRO E TAL, AQUI TERIA QUE TER FLEX BOX-->
 
+        </form>
+
+    </div>
+    <script src="script.js"></script>
 
 </body>
 
