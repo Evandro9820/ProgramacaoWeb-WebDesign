@@ -10,15 +10,22 @@
 </head>
 
 <body>
+
     <script src="script.js"></script>
 
     <div class="container">
+        <div><!--Pontuação-->
+            <h1><span id="pontucao"></span> </h1>
+        </div>
+        <div class="barra-de-progresso-container">
+            <div class="barra-progresso" id="progresso"></div>
+        </div>
         <h1>Cadastro</h1>
         <div class="pagina-formulario" id="pagina-1" data-etapa="1">
             <form id="form" onsubmit="event.preventDefault()"><!--IMPEDE DE ENVIAR O FORMULARIO-->
 
-                <label>Nome Completo:</label>
-                <input type="text" id="nome" onfocusout="pontuar()" />
+                <label class="input__label">Nome Completo:</label>
+                <input class="input__field" type="text" id="nome" onfocusout="pontuar()" />
 
                 <label>Idade:</label>
                 <input type="number" onfocusout="pontuar()" />
@@ -73,41 +80,43 @@
         </div>
 
         <div class="pagina-formulario" id="pagina-2" data-etapa="2" style="display: none;">
-        <form id="form" onsubmit="event.preventDefault()"><!--IMPEDE DE ENVIAR O FORMULARIO-->   
-            <label>Celular/WhatsApp:</label>
-            <input type="number" onfocusout="pontuar()" />
+            <form id="form" onsubmit="event.preventDefault()"><!--IMPEDE DE ENVIAR O FORMULARIO-->
+                <label>Celular/WhatsApp:</label>
+                <input type="number" onfocusout="pontuar()" />
 
-            <label>E-mail:</label>
-            <input type="email" onfocusout="pontuar()" />
+                <label>E-mail:</label>
+                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
+                    onfocusout="pontuar()">
 
-            <label>CPF:</label>
-            <input type="number" onfocusout="pontuar()" />
+                <label>CPF:</label>
+                <input type="number" onfocusout="pontuar()" />
 
-            <label>RG:</label>
-            <input type="number" />
+                <label>RG:</label>
+                <input type="number" />
 
-            <label for="civil">Estado Cívil:</label>
-            <select onfocusout="pontuar()">
-                <option> </option>
-                <option>Solteiro(o)</option>
-                <option>Casado(a)</option>
-                <option>Divorciado(a)</option>
-                <option>Prefiro não responder</option>
-            </select>
+                <label for="civil">Estado Cívil:</label>
+                <select onfocusout="pontuar()">
+                    <option> </option>
+                    <option>Solteiro(o)</option>
+                    <option>Casado(a)</option>
+                    <option>Divorciado(a)</option>
+                    <option>Prefiro não responder</option>
+                </select>
         </div>
 
         <div id="botao">
             <button class="btnProxima" type="button" onclick="etapaAnterior()">Anterior</button>
-            <button id="btn-salvar" onclick="limparFormulario()">SALVAR</button>
+            <button id="btn-salvar" onclick="confete()">SALVAR</button>
             <button class="btnProxima" type="button" onclick="proximaEtapa()">Próximo</button>
         </div>
         <!--JA É SUBMITT AUTOMATICAMENTE     - SE QUISER QUE FIQUE UM EM CIMA DO OUTRO E TAL, AQUI TERIA QUE TER FLEX BOX-->
 
         </form>
 
-    </div>
-    <script src="script.js"></script>
+    </div>]
 
+    <script src="script.js"></script>
+    </section>
 </body>
 
 </html>
