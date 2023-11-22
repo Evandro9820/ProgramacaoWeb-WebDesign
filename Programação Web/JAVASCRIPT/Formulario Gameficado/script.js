@@ -19,6 +19,7 @@ function pontuar() {
     progresso.innerHTML = largura+'%';
 } */
 
+
 let pontuacao = 0;
 function pontuar() {
     pontuacao+=10;
@@ -78,7 +79,7 @@ function moverEtapa(direcao) {
 
 /* function confete() {
     for (let i = 0; i < 20; i++) {
-        let confetti = document.createElement('div');
+        let confetti = document.createElement('div');phone)
         confetti.className = 'confetti';
         confetti.style.left = Math.random() * 100 + '%';
         confetti.style.top = Math.random() * 100 + '%';
@@ -99,4 +100,19 @@ function confete() {
     setTimeout(() => {
         confetti.remove();
     }, 1000);
+}
+// Validação de um telefone 
+
+function validarCelularBrasil(numero) {
+    var re = /^0?[1-9]{2}9?[0-9]{8}$/;
+    return re.test(numero);
+}
+
+function validarTelefone() {
+    var numero = document.getElementById('telefone').value;
+    if (!validarCelularBrasil(numero)) {
+        alert('Por favor, insira um número de celular válido.');
+        return false;
+    }
+    return true;
 }

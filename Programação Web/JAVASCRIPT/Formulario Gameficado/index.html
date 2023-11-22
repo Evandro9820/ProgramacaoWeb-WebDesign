@@ -82,7 +82,8 @@
         <div class="pagina-formulario" id="pagina-2" data-etapa="2" style="display: none;">
             <form id="form" onsubmit="event.preventDefault()"><!--IMPEDE DE ENVIAR O FORMULARIO-->
                 <label>Celular/WhatsApp:</label>
-                <input type="number" onfocusout="pontuar()" />
+                <input  id = "telefone"    type="text" onfocusout="pontuar() , validarTelefone()" required/>
+                <div id="erro-telefone"></div>
 
                 <label>E-mail:</label>
                 <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
