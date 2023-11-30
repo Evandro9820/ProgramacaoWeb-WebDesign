@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 360px;
+            height: 100px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .container:nth-child(1) .item {
+            align-self: center;
+        }
+        
+        .container:nth-child(2) .item:nth-child(1) {
+            align-self: flex-end;
+        }
+        
+        .container:nth-child(2) .item:nth-child(2) {
+            align-self: center;
+        }
+        
+        .container:nth-child(2) .item:nth-child(3) {
+            align-self: flex-start;
+        }
+        
+        .container:nth-child(3) .item:nth-child(1) {
+            align-self: flex-start;
+        }
+        
+        .container:nth-child(3) .item:nth-child(2) {
+            align-self: flex-end;
+        }
+        
+        .container:nth-child(3) .item:nth-child(3) {
+            align-self: stretch;
+        }
+        
+        .container:nth-child(4) .item:nth-child(1) {
+            align-self: stretch;
+        }
+        
+        .container:nth-child(4) .item:nth-child(2) {
+            align-self: flex-end;
+        }
+        
+        .container:nth-child(4) .item:nth-child(3) {
+            align-self: flex-start;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

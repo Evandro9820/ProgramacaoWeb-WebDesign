@@ -1,24 +1,4 @@
-/* //LIGAÇÕES 
-let htmlPontuacao = document.getElementById("pontucao")
-
-//VARIAVEIS GLOBAIS
-
-let pontos = 0
-
-
-
-function pontuar() {
-    pontos +=10
-    htmlPontuacao.innerHTML = pontos
-    
-    const progresso = document.getElementById('progresso')
-    const largura = Math.min(pontos,100);
-
-    progresso.style.width=largura+'%';
-
-    progresso.innerHTML = largura+'%';
-} */
-
+// PONTUACAO
 
 let pontuacao = 0;
 function pontuar() {
@@ -91,7 +71,7 @@ document.getElementById('btn-salvar').addEventListener('click', function () {
     for (let i = 0; i < 50; i++){ confete();}
 });
 
-function confete() {
+/* function confete() {
     const confetti = document.createElement('div');
     confetti.classList.add('confetti');
     confetti.style.left = Math.random() * window.innerWidth + 'px';
@@ -100,7 +80,9 @@ function confete() {
     setTimeout(() => {
         confetti.remove();
     }, 1000);
-}
+} */
+
+
 // Validação de um telefone 
 
 function validarCelularBrasil(numero) {
@@ -116,3 +98,13 @@ function validarTelefone() {
     }
     return true;
 }
+
+
+// FUNÇÃO BARRA DE PROGRESSO
+/* function updateProgressBar() {
+    const inputFields = document.querySelectorAll(['input','select']);
+    const filledFields = Array.from(inputFields).filter(field => field.value.trim() !== '').length;
+    const progressPercentage = (filledFields / inputFields.length) * 100;
+    const progressBar = document.getElementById('progresso');
+    progressBar.style.width = `${progressPercentage}%`;
+  } */

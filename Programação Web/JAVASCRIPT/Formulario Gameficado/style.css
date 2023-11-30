@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url("img/gif-background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -8,7 +10,7 @@ body {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #242323;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 10vh;
     border-radius: 20px;
@@ -16,7 +18,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -26,7 +28,7 @@ form {
 }
 
 label {
-    color: #333;
+    color:  #ffffff;
     margin-bottom: 5px;
 }
 
@@ -35,14 +37,15 @@ select {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 10px;
     position: relative;
+    background-color:   #ffffff;
 }
 
 button {
     padding: 10px 20px;
     background-color: #007BFF;
-    color: #ffffff;
+    color: #000000;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -76,6 +79,7 @@ button:hover {
     height: 30px;
     margin-bottom: 10px;
     border-radius: 10px;
+    transform: width 0.5s ease;
 }
 
 .barra-progresso {
@@ -86,6 +90,16 @@ button:hover {
     line-height: 30px;
     color: white;
     border-radius: 10px;
-}
+    transition: all 0.5s ease;
+   
+} 
+
+/* .progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: green;
+    border-radius: 10px;
+    transition: width 0.5s ease; 
+  } */
 
 /* aaa */
